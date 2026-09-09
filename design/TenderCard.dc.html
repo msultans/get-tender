@@ -12,10 +12,14 @@
     body { margin: 0; font-family: 'Golos Text', 'Helvetica Neue', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: #131313; } a:hover { color: #4a4a4a; }
     .num { font-variant-numeric: tabular-nums; }
+    @keyframes gt-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.2 } }
+    @keyframes gt-sweep { 0% { transform: translateX(-120%) } 55%, 100% { transform: translateX(460%) } }
+    .gt-dot { animation: gt-pulse 1.8s ease-in-out infinite }
+    .gt-sweep { animation: gt-sweep 2.9s ease-in-out infinite }
   </style>
 </helmet>
 
-<div style="display: flex; width: 1440px; height: 1960px; background: #ffffff; color: #131313">
+<div style="display: flex; width: 1600px; height: 2620px; background: #ffffff; color: #131313">
 
   <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; width: 56px; padding: 26px 0; border-right: 1px solid #e3e3e3; box-sizing: border-box">
     <div style="width: 16px; height: 16px; border: 1.5px solid #131313"></div>
@@ -26,18 +30,50 @@
     <div style="width: 4px; height: 4px; background: #d5d5d5; border-radius: 2px"></div>
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 0; width: 744px; padding: 30px 36px 44px 36px; box-sizing: border-box; overflow: hidden">
+  <div style="display: flex; flex-direction: column; gap: 0; width: 216px; padding: 28px 18px; border-right: 1px solid #e3e3e3; box-sizing: border-box; background: #fbfbfa">
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ДОКУМЕНТЫ</div>
 
-    <div style="display: flex; gap: 12px; align-items: baseline">
-      <div style="font-size: 12.5px; color: #4a4a4a">АО «KEGOC»</div>
-      <div style="flex-grow: 1"></div>
-      <div style="font-size: 12.5px; color: #7c7c7c" class="num">закупка № 1245224 · лот № 1 (398-2 Р, 4507400)</div>
+    <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; margin-top: 22px">ОБЩИЕ ПО ЗАКУПКЕ</div>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 12.5px; color: #ababab; line-height: 1.35">Объявление о закупке</div>
+        <div style="font-size: 11px; color: #c4c4c4">не загружено</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 12.5px; color: #ababab; line-height: 1.35">Тендерная документация</div>
+        <div style="font-size: 11px; color: #c4c4c4">не загружена</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 12.5px; color: #ababab; line-height: 1.35">Проект договора</div>
+        <div style="font-size: 11px; color: #c4c4c4">не загружен</div>
+      </div>
     </div>
 
-    <div style="font-size: 25px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.24; margin-top: 12px">Восстановление герметичных швов кровли стилобатов административного здания</div>
+    <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; margin-top: 26px">ЛОТ 1 · 398-2 Р</div>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px">
+      <div style="display: flex; gap: 9px">
+        <div style="width: 2px; background: #131313; align-self: stretch"></div>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <div style="font-size: 12.5px; font-weight: 500; line-height: 1.35">Техническая спецификация</div>
+          <div style="font-size: 11px; color: #7c7c7c" class="num">12 стр. · открыта</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.35">Чек-лист скрытых работ</div>
+        <div style="font-size: 11px; color: #ababab">внутри ТС, раздел 6</div>
+      </div>
+    </div>
 
-    <div style="display: flex; gap: 12px; align-items: baseline; margin-top: 12px">
-      <div style="font-size: 13px; color: #4a4a4a">работы · ремонт зданий и сооружений · Астана</div>
+    <div style="flex-grow: 1"></div>
+    <div style="height: 1px; background: #e8e8e6"></div>
+    <div style="font-size: 11px; color: #7c7c7c; line-height: 1.5; margin-top: 12px">Комплект неполный: загружен 1 файл из 4. Разбор идёт по тому, что есть.</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0; width: 700px; padding: 28px 32px 44px 32px; box-sizing: border-box; overflow: hidden">
+
+    <div style="display: flex; gap: 10px; align-items: baseline">
+      <div style="font-size: 12.5px; font-weight: 500">Запрос ценовых предложений</div>
+      <div style="font-size: 12.5px; color: #7c7c7c">· приём предложений</div>
       <div style="flex-grow: 1"></div>
       <div style="display: flex; gap: 16px">
         <div style="font-size: 13px; font-weight: 500">В работу</div>
@@ -46,165 +82,294 @@
       </div>
     </div>
 
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">СУТЬ</div>
+    <div style="font-size: 25px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.24; margin-top: 12px">Восстановление герметичных швов кровли стилобатов административного здания</div>
 
-    <div style="font-size: 15px; line-height: 1.6; margin-top: 12px">Точечный ремонт гидроизоляции стилобатной кровли: послойная разборка балластного пирога — плитка, песко-цемент, геотекстиль, — поиск дефектов, ремонт мембраны или битума, обратная сборка. Объём не более 700 м², точный определяется после диагностики.</div>
-    <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 6px">ТС п. 3 · разделы 4 и 7</div>
-
-    <div style="font-size: 15px; line-height: 1.6; margin-top: 16px">Заявлен «текущий ремонт», но половина спецификации — приборное обследование: тепловизор, георадар, электровекторное сканирование, техническое заключение с термограммами и радарграммами.</div>
-    <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 6px">ТС п. 4.3–4.7</div>
-
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ОСНОВНЫЕ УСЛОВИЯ</div>
-
-    <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 14px">
-      <div style="font-size: 14px; color: #4a4a4a">Цена закупки</div>
-      <div style="flex-grow: 1"></div>
-      <div style="font-size: 15px; color: #7c7c7c">нет в этом документе</div>
-    </div>
-    <div style="font-size: 12px; color: #7c7c7c; line-height: 1.55; margin-top: 6px">Техническая спецификация суммы не содержит — она берётся из карточки закупки на портале. До этого финансовый блок не считается.</div>
-
-    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 18px">
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 20px">
       <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Способ закупки</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px; font-weight: 500">запрос ценовых предложений</div>
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Заказчик</div>
+        <div style="font-size: 13.5px; font-weight: 500">АО «KEGOC»</div>
       </div>
       <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Лотов в закупке</div>
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Номер закупки</div>
+        <div style="font-size: 13.5px" class="num">1245224</div>
         <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px" class="num">1</div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">строка 398-2 Р · лот 4507400</div>
       </div>
       <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Место выполнения</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px">Астана, пр. Тәуелсіздік, 59</div>
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Сумма закупки</div>
+        <div style="font-size: 13.5px; color: #7c7c7c">нет в этом документе — из карточки закупки</div>
       </div>
       <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Срок выполнения</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px" class="num">60 календарных дней с подписания</div>
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Срок договора</div>
+        <div style="font-size: 13.5px" class="num">60 календарных дней с даты подписания</div>
       </div>
       <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Оплата</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px; font-weight: 500; border-bottom: 1px solid #131313" class="num">аванс 30 % · окончательный 70 %</div>
-      </div>
-      <div style="display: flex; align-items: baseline">
-        <div style="font-size: 14px; color: #4a4a4a">Объём</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 14px" class="num">не более 700 м² · приблизительно</div>
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Условия оплаты</div>
+        <div style="font-size: 13.5px; font-weight: 500; border-bottom: 1px solid #131313" class="num">аванс 30 % · окончательный 70 %</div>
       </div>
     </div>
 
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">КВАЛИФИКАЦИОННЫЕ ТРЕБОВАНИЯ</div>
+    <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 18px; padding: 14px 16px; background: #f7f7f5">
+      <div style="display: flex; align-items: baseline">
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">ЛОТОВ В ЗАКУПКЕ · 1</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11px; color: #7c7c7c">название · локация · сумма</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <div style="width: 14px; font-size: 13px; font-weight: 500" class="num">1</div>
+        <div style="font-size: 13px; font-weight: 500">Работы по текущему ремонту нежилых зданий</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a">Астана, пр. Тәуелсіздік, 59</div>
+        <div style="width: 130px; font-size: 13px; color: #7c7c7c; text-align: right">сумма — из карточки</div>
+      </div>
+    </div>
 
-    <div style="font-size: 13px; color: #7c7c7c; line-height: 1.55; margin-top: 12px">В этом файле только техспецификация — раздела 3 тендерной документации в нём нет. Всё ниже найдено в самой ТС и становится обязанностью после подписания.</div>
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 18px; padding: 16px 18px; border: 1px solid #131313">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <div class="gt-dot" style="width: 7px; height: 7px; border-radius: 4px; background: #131313"></div>
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">ДО ОКОНЧАНИЯ ПРИЁМА ПРЕДЛОЖЕНИЙ</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11.5px; color: #7c7c7c; font-style: italic">пример — в присланном PDF срока подачи нет</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 12px">
+        <div style="font-size: 30px; font-weight: 600; letter-spacing: -0.7px" class="num">4 дня 11 часов</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">до 14.09, 10:00</div>
+      </div>
+      <div style="display: flex; height: 6px; background: #ececea; margin-top: 14px; overflow: hidden">
+        <div style="width: 63%; background: #131313; position: relative; overflow: hidden">
+          <div class="gt-sweep" style="position: absolute; top: 0; bottom: 0; width: 22%; background: rgba(255,255,255,0.36)"></div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: baseline; margin-top: 8px">
+        <div style="font-size: 11.5px; color: #7c7c7c" class="num">опубликовано 31.08</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11.5px; color: #7c7c7c" class="num">прошло 63 % срока</div>
+      </div>
+    </div>
 
-    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px">
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ЧТО НУЖНО СДЕЛАТЬ</div>
+
+    <div style="font-size: 15px; line-height: 1.6; margin-top: 12px">Один объект — административное здание KEGOC в Астане. Кровля стилобата балластного типа: тротуарная плитка, песко-цементная подсыпка, геотекстиль, дренажная мембрана, гидроизоляционный ковёр. Течёт в помещения снизу. Нужно приборами найти точные места повреждений, вскрыть пирог послойно, отремонтировать гидроизоляцию заплатами и собрать всё обратно. Площадь не более 700 м², точная определяется на диагностике.</div>
+    <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 8px">ТС п. 3 · разделы 4 и 7</div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 18px">
+      <div style="display: flex; align-items: baseline; gap: 12px; padding-bottom: 9px; border-bottom: 1px solid #e3e3e3">
+        <div style="width: 146px; font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">ЭТАП</div>
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">СОСТАВ</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; text-align: right">ОБЪЁМ И ТРЕБОВАНИЕ</div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 146px; font-size: 13.5px; font-weight: 500">1 · Диагностика</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">тепловизор, георадар, ЭВК, техзаключение</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">не менее 3 эпицентров</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 146px; font-size: 13.5px; font-weight: 500">2 · Демонтаж</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">плитка, песко-цемент 3–5 см, геотекстиль</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">вручную, до 700 м²</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 146px; font-size: 13.5px; font-weight: 500">3 · Ремонт</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">заплаты ПВХ/ТПО сваркой либо битум наплавлением</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">нахлёст 200 / 150 мм</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 146px; font-size: 13.5px; font-weight: 500">4 · Обратный монтаж</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">геотекстиль, плиты, дренажная мембрана, галька</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 13px; color: #4a4a4a; text-align: right">в проектный уровень</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 146px; font-size: 13.5px; font-weight: 500">5 · Приёмка</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">чек-лист, гидроиспытания проливом</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 164px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">8 пунктов · 2–4 часа</div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">КВАЛИФИКАЦИОННЫЕ ТРЕБОВАНИЯ · ПО СРОКАМ ПРЕДОСТАВЛЕНИЯ</div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px">
+      <div style="font-size: 12.5px; font-weight: 600">При подаче предложения</div>
+      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">В присланном файле требований к составу заявки нет — они в тендерной документации, которая не загружена. До неё раздел неполный.</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600" class="num">В течение 10 календарных дней после подписания</div>
       <div style="display: flex; align-items: baseline; gap: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Тепловизор, георадар, электровекторное сканирование</div>
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Техническое заключение: схема кровли с зонами переувлажнения, фотофиксация с привязкой к осям, термограммы и радарграммы с расшифровкой, рекомендации по ремонту</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 4.7</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">На всё время исполнения</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Тепловизор, георадар, электронная дефектоскопия, электровекторное сканирование</div>
         <div style="flex-grow: 1"></div>
         <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 4.3–4.4</div>
       </div>
       <div style="display: flex; align-items: baseline; gap: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Техзаключение за 10 календарных дней после договора</div>
-        <div style="flex-grow: 1"></div>
-        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 4.7</div>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Сварочный фен, ролики, зонд либо горелка с редуктором</div>
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Профессиональный сварочный фен, ролики, зонд либо газовая горелка с редуктором. Бытовые фены запрещены</div>
         <div style="flex-grow: 1"></div>
         <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 5.2</div>
       </div>
       <div style="display: flex; align-items: baseline; gap: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Вскрытие и герметизация за один световой день, тенты</div>
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Аварийные тенты на площадке, вскрытие и герметизация за один световой день</div>
         <div style="flex-grow: 1"></div>
         <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 7.1</div>
       </div>
       <div style="display: flex; align-items: baseline; gap: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Лицензия</div>
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Материалы новые, с сертификатами соответствия РК, стойкие от −40 до +40 °C</div>
         <div style="flex-grow: 1"></div>
-        <div style="font-size: 12px; color: #7c7c7c">в этом документе не упомянута</div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 5.1</div>
       </div>
     </div>
 
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ОТВЕТСТВЕННОСТЬ И ШТРАФЫ</div>
+    <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">В гарантийный период</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a">Прибытие на объект для фиксации дефекта — 24 часа с уведомления</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 7.1.3</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #e3e3e3">
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Порог демпинга</div>
+        <div style="font-size: 13.5px; font-weight: 500">нет — в ЗЦП побеждает наименьшая цена</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Условные скидки</div>
+        <div style="font-size: 13.5px; font-weight: 500">в ЗЦП не применяются</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Обеспечение заявки</div>
+        <div style="font-size: 13.5px; color: #7c7c7c">нет в этом документе</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Срок обеспечения заявки</div>
+        <div style="font-size: 13.5px; color: #7c7c7c">нет в этом документе</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Обеспечение исполнения</div>
+        <div style="font-size: 13.5px; color: #7c7c7c">нет в этом документе</div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">НЕПОНЯТКИ, ПОДВОДНЫЕ КАМНИ И РИСКИ</div>
 
     <div style="display: flex; flex-direction: column; gap: 0; margin-top: 14px; padding: 18px 20px; background: #f7f7f5">
-      <div style="font-size: 15px; font-weight: 500; line-height: 1.55">Полная материальная ответственность за протечки — включая оргтехнику и внутреннюю отделку помещений под кровлей, устранение за 5 календарных дней, возмещение по независимой экспертной оценке.</div>
-      <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 8px">ТС п. 7.4</div>
+      <div style="font-size: 15px; font-weight: 500; line-height: 1.55">Цена подаётся до диагностики, а объём определяется после неё. 700 м² — потолок, а не задание: сколько метров реально вскрывать, станет известно из техзаключения, которое делается уже после подписания.</div>
+      <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 8px">ТС п. 3 · п. 4.7</div>
+
       <div style="height: 1px; background: #dedede; margin-top: 16px"></div>
-      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 14px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Штраф за неоригинальные материалы плюс переделка за свой счёт</div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 15px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Полная материальная ответственность за протечки: помещения снизу, оргтехника, внутренняя отделка. Устранение за 5 календарных дней, возмещение рыночной стоимости по независимой экспертизе. Потолка нет — ответственность не ограничена ценой договора.</div>
         <div style="flex-grow: 1"></div>
-        <div style="font-size: 13.5px; font-weight: 500" class="num">10 % от договора</div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 7.4</div>
       </div>
-      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 10px">
-        <div style="font-size: 13.5px; color: #4a4a4a">Прибытие на объект по гарантийному случаю</div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Штраф 10 % от стоимости договора за неоригинальные материалы плюс переделка за свой счёт.</div>
         <div style="flex-grow: 1"></div>
-        <div style="font-size: 13.5px" class="num">24 часа</div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 7.2</div>
       </div>
-      <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.55; margin-top: 14px">Объект — действующее административное здание. Риск залива офисов ложится на исполнителя целиком и по сумме не ограничен ценой договора.</div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Вскрытие, ремонт и герметизация — за один световой день и при благоприятном прогнозе. Погода становится риском исполнителя.</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5">ТС п. 7.1</div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Гарантийный случай упомянут, а гарантийный срок нигде не назван. Вопрос на разъяснение.</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 12px; color: #7c7c7c">не найдено</div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Состав существующего пирога не описан: ПВХ, ТПО или битум — от этого зависят и материал заплат, и оборудование. Вопрос на разъяснение.</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 12px; color: #7c7c7c">не найдено</div>
+      </div>
     </div>
 
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ЗАПАС ПО ЦЕНЕ</div>
-
-    <div style="font-size: 15px; line-height: 1.6; margin-top: 12px">Это ЗЦП: порога демпинга и условных скидок нет, побеждает наименьшая цена. Единственный отсев — несоответствие спецификации, поэтому цена решает всё, а риск переносится в исполнение.</div>
-    <div style="font-size: 12px; color: #7c7c7c; border-bottom: 1px solid #d5d5d5; align-self: flex-start; margin-top: 6px">способ закупки · шапка ТС</div>
-
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ФИНАНСОВЫЕ ВЫВОДЫ</div>
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#131313" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 L8 11 L13 6"/></svg>
+      <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ФИНАНСОВАЯ МОДЕЛЬ</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 12.5px; color: #7c7c7c">свернуть</div>
+    </div>
 
     <div style="display: flex; flex-direction: column; gap: 0; margin-top: 14px; padding: 20px 22px; background: #f7f7f5">
-      <div style="font-size: 17px; font-weight: 500; line-height: 1.5">Расчёт не построен: цены лота нет в этом документе. Ниже — то, что уже известно из условий.</div>
+      <div style="font-size: 17px; font-weight: 500; line-height: 1.5">Расчёт не построен: суммы закупки в этом документе нет. Ниже — то, что уже известно из условий.</div>
       <div style="height: 1px; background: #dedede; margin-top: 18px"></div>
       <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px">
         <div style="display: flex; align-items: baseline; gap: 14px">
-          <div style="font-size: 13.5px; color: #4a4a4a">Кассовый разрыв</div>
-          <div style="flex-grow: 1"></div>
+          <div style="width: 208px; font-size: 13.5px; color: #4a4a4a">Кассовый разрыв</div>
           <div style="font-size: 13.5px; font-weight: 500">почти нет — аванс 30 %</div>
         </div>
         <div style="display: flex; align-items: baseline; gap: 14px">
-          <div style="font-size: 13.5px; color: #4a4a4a">Материалы</div>
-          <div style="flex-grow: 1"></div>
+          <div style="width: 208px; font-size: 13.5px; color: #4a4a4a">Материалы</div>
           <div style="font-size: 13.5px">в стоимости договора, поставляет исполнитель</div>
         </div>
         <div style="display: flex; align-items: baseline; gap: 14px">
-          <div style="font-size: 13.5px; color: #4a4a4a">Риск объёма</div>
-          <div style="flex-grow: 1"></div>
-          <div style="font-size: 13.5px">на исполнителе — цена подаётся до диагностики</div>
+          <div style="width: 208px; font-size: 13.5px; color: #4a4a4a">Диагностика</div>
+          <div style="font-size: 13.5px">приборы или субподряд — отдельная статья до начала работ</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 208px; font-size: 13.5px; color: #4a4a4a">Резерв на риск залива</div>
+          <div style="font-size: 13.5px">нужен — ответственность не ограничена суммой договора</div>
         </div>
       </div>
-      <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.55; margin-top: 16px">Главный вопрос экономики здесь не маржа, а объём: 700 м² — потолок, а не задание. Реальный объём известен только после техзаключения, которое делается уже после подписания.</div>
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 18px">
+        <div style="font-size: 12.5px; color: #7c7c7c">Появится сумма закупки — соберётся модель на три сценария</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; font-weight: 500; border-bottom: 1px solid #131313">Ввести сумму вручную</div>
+      </div>
     </div>
 
-    <div style="height: 1px; background: #e3e3e3; margin-top: 26px"></div>
-    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ЧЕГО НЕТ В ДОКУМЕНТЕ</div>
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#131313" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 L11 8 L6 13"/></svg>
+      <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ПРОШЛЫЕ ТЕНДЕРЫ И КОНКУРЕНТЫ</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 12.5px; color: #7c7c7c">развернуть</div>
+    </div>
 
-    <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 14px">
-      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Цена лота, обеспечение заявки и срок подачи — в техспецификации их нет, нужна карточка закупки.</div>
-      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Гарантийный срок упоминается через гарантийный случай, но нигде не назван в месяцах.</div>
-      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Точный объём работ и состав существующего пирога кровли — определяются на диагностике.</div>
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 12px">
+      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Не собиралось. Внутри: похожие закупки KEGOC по кровельным работам, кто подавался и по каким ценам, кто выиграл и с каким снижением от стартовой, проверка победителей в РНУ и Перечне ненадёжных Фонда.</div>
+      <div style="flex-grow: 1"></div>
+      <div style="width: 106px; font-size: 13px; font-weight: 500; text-align: right; border-bottom: 1px solid #131313">Собрать</div>
     </div>
 
   </div>
 
-  <div style="display: flex; flex-direction: column; gap: 0; width: 640px; border-left: 1px solid #e3e3e3; background: #d9d9d6; box-sizing: border-box">
+  <div style="display: flex; flex-direction: column; gap: 0; width: 628px; border-left: 1px solid #e3e3e3; background: #d9d9d6; box-sizing: border-box">
 
-    <div style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; background: #ffffff; border-bottom: 1px solid #e3e3e3">
+    <div style="display: flex; align-items: center; gap: 14px; padding: 16px 22px; background: #ffffff; border-bottom: 1px solid #e3e3e3">
       <div style="font-size: 13px; font-weight: 500">Техническая спецификация.pdf</div>
       <div style="font-size: 12.5px; color: #7c7c7c" class="num">7 / 12</div>
       <div style="flex-grow: 1"></div>
       <div style="font-size: 12.5px; color: #4a4a4a">Поиск</div>
-      <div style="font-size: 12.5px; color: #4a4a4a">Все документы · 1</div>
+      <div style="font-size: 12.5px; color: #4a4a4a">Скачать</div>
     </div>
 
-    <div style="display: flex; flex-direction: column; gap: 0; flex-grow: 1; padding: 22px 26px; overflow: hidden">
+    <div style="display: flex; flex-direction: column; gap: 0; flex-grow: 1; padding: 20px 24px; overflow: hidden">
 
       <div style="position: relative; box-shadow: 0 1px 4px rgba(0,0,0,0.18); background: #ffffff">
         <img src="ts-page.png" style="display: block; width: 100%">
@@ -212,7 +377,7 @@
       </div>
 
       <div style="display: flex; align-items: baseline; gap: 12px; padding: 14px 2px 0 2px">
-        <div style="font-size: 11.5px; color: #3a3a3a; line-height: 1.55">Открыто по ссылке «аванс 30 % · окончательный 70 %» из блока «Основные условия». Подсвечена строка «Условия оплаты» — это и есть основание вывода о кассовом разрыве.</div>
+        <div style="font-size: 11.5px; color: #3a3a3a; line-height: 1.55">Открыто по ссылке «аванс 30 % · окончательный 70 %». Подсвечена строка «Условия оплаты» — рамка поставлена по координатам из самого PDF.</div>
       </div>
 
     </div>
