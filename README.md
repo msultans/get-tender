@@ -29,7 +29,8 @@
 https://claude.ai/code/artifact/5b2a7c0a-178a-4a06-8660-86680c9683cd
 
 Исходники артбордов — в `design/`: `Main.dc.html` (лента),
-`TenderCard.dc.html` (карточка), `Telegram.dc.html` (уведомление),
+`TenderCard.dc.html` и `TenderCard2.dc.html` (карточки на двух реальных
+комплектах), `Telegram.dc.html` (уведомление),
 `canvas.json` (раскладка). Канвас пересобирается из них.
 
 **Первая редакция в Figma**, оставлена для сравнения:

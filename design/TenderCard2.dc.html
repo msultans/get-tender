@@ -1,0 +1,536 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Golos Text', 'Helvetica Neue', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #131313; } a:hover { color: #4a4a4a; }
+    .num { font-variant-numeric: tabular-nums; }
+    @keyframes gt-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.2 } }
+    @keyframes gt-sweep { 0% { transform: translateX(-120%) } 55%, 100% { transform: translateX(460%) } }
+    .gt-dot { animation: gt-pulse 1.8s ease-in-out infinite }
+    .gt-sweep { animation: gt-sweep 2.9s ease-in-out infinite }
+  </style>
+</helmet>
+
+<div style="display: flex; width: 1600px; height: 4500px; background: #ffffff; color: #131313">
+
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 22px; width: 56px; padding: 26px 0; border-right: 1px solid #e3e3e3; box-sizing: border-box">
+    <div style="width: 16px; height: 16px; border: 1.5px solid #131313"></div>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#7c7c7c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 L5 8 L10 13"/><path d="M13.5 3 L13.5 13"/></svg>
+    <div style="width: 4px; height: 4px; background: #131313; border-radius: 2px"></div>
+    <div style="width: 4px; height: 4px; background: #d5d5d5; border-radius: 2px"></div>
+    <div style="width: 4px; height: 4px; background: #d5d5d5; border-radius: 2px"></div>
+    <div style="width: 4px; height: 4px; background: #d5d5d5; border-radius: 2px"></div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0; width: 700px; padding: 28px 32px 44px 32px; box-sizing: border-box; overflow: hidden">
+
+    <div style="display: flex; gap: 10px; align-items: baseline">
+      <div style="font-size: 12.5px; font-weight: 500">Открытый тендер</div>
+      <div style="font-size: 12.5px; color: #7c7c7c">Опубликовано предварительное обсуждение</div>
+      <div style="flex-grow: 1"></div>
+      <div style="display: flex; gap: 16px">
+        <div style="font-size: 13px; font-weight: 500">В работу</div>
+        <div style="font-size: 13px; color: #7c7c7c">Отложить</div>
+        <div style="font-size: 13px; color: #7c7c7c">В архив</div>
+      </div>
+    </div>
+
+    <div style="font-size: 25px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.24; margin-top: 12px">Осуществление авиаотправки консолидированных грузов АО «Кселл» по РК</div>
+
+    <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 18px">
+      <div style="font-size: 13.5px; color: #4a4a4a">Планируемая сумма без НДС</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 28px; font-weight: 600; letter-spacing: -0.6px; border-bottom: 1px solid #131313" class="num">49 875 000 ₸</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 20px">
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Заказчик</div>
+        <div style="font-size: 13.5px; font-weight: 500">АО «Кселл»</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a">Алматы, Алимжанова 51</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Номер закупки</div>
+        <div style="font-size: 13.5px" class="num">1247669</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">строка плана 443 У</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Срок оказания услуг</div>
+        <div style="font-size: 13.5px" class="num">275 календарных дней с даты подписания</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">договор действует 12 месяцев</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Оплата</div>
+        <div style="font-size: 13.5px; font-weight: 500" class="num">аванса нет · по факту 100 %</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">не позднее 30 кал. дней с акта</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 186px; font-size: 13.5px; color: #4a4a4a">Контакт заказчика</div>
+        <div style="font-size: 13.5px">Греков Р. С. · +7 701 211-02-70</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 18px; padding: 14px 16px; background: #f7f7f5">
+      <div style="display: flex; align-items: baseline">
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">ЛОТОВ В ЗАКУПКЕ · 1</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11px; color: #7c7c7c">название · локация · сумма</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <div style="width: 14px; font-size: 13px; font-weight: 500" class="num">1</div>
+        <div style="font-size: 13px; font-weight: 500">Транспортно-логистические услуги</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a">по всей территории РК</div>
+        <div style="width: 116px; font-size: 13px; font-weight: 500; text-align: right" class="num">49 875 000 ₸</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 18px; padding: 16px 18px; border: 1px solid #131313">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <div class="gt-dot" style="width: 7px; height: 7px; border-radius: 4px; background: #131313"></div>
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">СРОК ТЕНДЕРА</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11.5px; font-weight: 500">Ждём объявления о закупке</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 12px">
+        <div style="font-size: 30px; font-weight: 600; letter-spacing: -0.7px; color: #ababab" class="num">приём ещё не открыт</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">9-й день</div>
+      </div>
+      <div style="display: flex; height: 6px; background: #ececea; margin-top: 14px; overflow: hidden">
+        <div style="width: 44%; background: #131313; position: relative; overflow: hidden">
+          <div class="gt-sweep" style="position: absolute; top: 0; bottom: 0; width: 22%; background: rgba(255,255,255,0.36)"></div>
+        </div>
+        <div style="width: 1px; background: #131313"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; margin-top: 8px">
+        <div style="font-size: 11.5px; color: #7c7c7c" class="num">замечания вт 25.08, 10:00</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 11.5px; color: #7c7c7c" class="num">ТД утверждена пн 31.08, 16:42</div>
+      </div>
+      <div style="height: 1px; background: #e8e8e6; margin-top: 12px"></div>
+      <div style="font-size: 11.5px; color: #4a4a4a; margin-top: 10px" class="num">Окончательный срок приёма заявок публикуется в объявлении о закупке — его в комплекте ещё нет. Разъяснения запрашиваются не позднее чем за 3 рабочих дня до окончания приёма.</div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">ЧТО НУЖНО СДЕЛАТЬ</div>
+
+    <div style="font-size: 15px; line-height: 1.6; margin-top: 12px">Авиаотправка консолидированных грузов Kcell по всей территории Казахстана. Возят абонентские устройства, стартовые пакеты, ваучеры, карты оплаты, модемы, роутеры, сим-замены, а также рекламу: лифлеты, постеры, сувенирку, столы, оракал, муляжи, вывески, баннеры, ПВХ. Забор груза по вызову менеджера, в том числе после 18:00, в выходные и праздники; доставка с 9:00 до 18:00 ежедневно; вручение лично адресату под подпись. Все виды погрузочно-разгрузочных работ, своя упаковка, персональный менеджер 24/7, трекинг на сайте исполнителя, ответ на любой запрос за 20 минут, реестр доставок раз в месяц.</div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 18px">
+      <div style="display: flex; align-items: baseline; gap: 12px; padding-bottom: 9px; border-bottom: 1px solid #e3e3e3">
+        <div style="width: 132px; font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">ЧТО ДЕРЖИМ</div>
+        <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px">СОСТАВ</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; text-align: right">РЕЖИМ И ТРЕБОВАНИЕ</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Приём заявок</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">контактное лицо, мобильная связь и WhatsApp</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">24 часа · 7 дней</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Забор груза</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">подача транспорта к заказчику по вызову</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right">после 18:00, выходные, праздники</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Упаковка</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">картон, обёрточная и пузырчатая плёнка, скотч, стрейч</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right">маркировка «стекло», «хрупкое»</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Перевозка</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">авиа плюс погрузочно-разгрузочные работы всех видов</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right">транспорт технически исправен</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Вручение</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">лично адресату: ФИО, подпись, печать, дата и время</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">9:00–18:00 ежедневно</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Отчётность</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">трекинг на сайте, уведомления о доставке, реестр</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right">реестр раз в месяц</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Претензии</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">коммерческий акт по форме приложения 2 к ТС</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #4a4a4a; text-align: right" class="num">ответ 15 рабочих дней</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid #efefef">
+        <div style="width: 132px; font-size: 13.5px; font-weight: 500">Объёмы</div>
+        <div style="font-size: 13.5px; color: #4a4a4a">приложение 1 к ТС — направления, тоннаж, число отправлений</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 176px; font-size: 13px; color: #7c7c7c; text-align: right">файла нет в комплекте</div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">КВАЛИФИКАЦИОННЫЕ ТРЕБОВАНИЯ · ПО СРОКАМ ПРЕДОСТАВЛЕНИЯ</div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px; padding: 14px 16px; background: #f7f7f5">
+      <div style="font-size: 15px; font-weight: 500; line-height: 1.5">Опыт работы, лицензия, оборудование, техника и помещения — не требуются. Единственное требование к квалификации: один менеджер проекта по организации перевозок с сертификатом базового курса PMBOK, P2M, ICB или IPMA уровня D. Опыт этого специалиста тоже не требуется.</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">В составе тендерной заявки</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Специалист или менеджер проекта по организации перевозок — 1 человек, сертификат базового курса PMBOK, P2M, ICB или IPMA уровня D. Подтверждается копией удостоверения личности и актом о приёме на работу либо согласием по приложению 14 к Порядку</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Сведения о государственной регистрации, первом руководителе и учредителях — выданные не более чем за 30 календарных дней до вскрытия заявок</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Согласие с технической спецификацией заказчика; при альтернативных условиях — своя спецификация наравне с согласием</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Обеспечение заявки — деньги в электронном кошельке или электронная банковская гарантия</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 116px; flex-shrink: 0; font-size: 12.5px; font-weight: 500; text-align: right; white-space: nowrap" class="num">498 750 ₸</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Перечень соисполнителей с объёмом и видами услуг — не более 25 % общего объёма</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Ценовое предложение: цена за единицу и общая без НДС, с транспортировкой, страхованием, пошлинами и прочими расходами внутри</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Информация о бенефициарных владельцах по форме веб-портала, согласие с условиями обеспечения исполнения договора, ознакомление с Перечнем ненадёжных поставщиков Фонда</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Документы на условную скидку — акты, накладные и счета-фактуры за 5 лет, статус субъекта МСБ. Непредставление скидку снимает, но заявку не отклоняет</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">После подписания договора</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Обеспечение исполнения договора — банковская гарантия или платёжное поручение, срок действия до полного исполнения обязательств. Не внёс вовремя — заказчик отказывается от договора и удерживает обеспечение заявки</div>
+        <div style="flex-grow: 1"></div>
+        <div style="width: 116px; flex-shrink: 0; font-size: 12.5px; text-align: right; white-space: nowrap" class="num">20 раб. дн.</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">На всё время исполнения</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Обязательные виды страхования, предусмотренные законодательством, — исключительно за свой счёт</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Работники, прошедшие обучение по охране труда, промышленной и пожарной безопасности; спецодежда и СИЗ; периодические и предсменные медосмотры</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Собственная служба или специалисты по ПБ и ОТ — при численности исполнителя и соисполнителей свыше 50 человек</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Соисполнители — только заявленные на этапе тендера, не более четверти объёма и стоимости услуг</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">С окончательным актом</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Расчёт внутристрановой ценности на весь объём услуг — электронным документом на веб-портале</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Электронная счёт-фактура с номером заказа на поставку SAP PO, который заказчик выдаёт после подписания договора</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+      <div style="font-size: 12.5px; font-weight: 600">В гарантийный период</div>
+      <div style="display: flex; align-items: baseline; gap: 14px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Договор отсылает за гарантийным сроком к приложению 2, приложение 2 отсылает обратно к технической спецификации, а в спецификации срока нет</div>
+        <div style="flex-grow: 1"></div>
+        <div style="flex-shrink: 0; font-size: 12.5px; color: #7c7c7c; white-space: nowrap">не найдено</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 11px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #e3e3e3">
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Порог демпинга</div>
+        <div style="font-size: 13.5px; font-weight: 500">ниже среднего по допущенным более чем на 20 %</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Условные скидки</div>
+        <div style="font-size: 13.5px; font-weight: 500" class="num">опыт до 2,5 % · субъект МСБ 1 %</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13px; color: #4a4a4a" class="num">максимум 3,5 %</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Обеспечение заявки</div>
+        <div style="font-size: 13.5px" class="num">1 % · не менее срока действия заявки</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13.5px; font-weight: 500" class="num">498 750 ₸</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Обеспечение исполнения</div>
+        <div style="font-size: 13.5px" class="num">1 % · 20 рабочих дней с подписания</div>
+        <div style="flex-grow: 1"></div>
+        <div style="font-size: 13.5px; font-weight: 500" class="num">498 750 ₸</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Срок действия заявки</div>
+        <div style="font-size: 13.5px" class="num">не менее 90 календарных дней со дня вскрытия</div>
+      </div>
+      <div style="display: flex; align-items: baseline">
+        <div style="width: 258px; font-size: 13.5px; color: #4a4a4a">Соисполнение</div>
+        <div style="font-size: 13.5px" class="num">до 25 % общего объёма услуг</div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px; margin-top: 18px">НЕПОНЯТКИ, ПОДВОДНЫЕ КАМНИ И РИСКИ</div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 14px; padding: 18px 20px; background: #f7f7f5">
+      <div style="font-size: 15px; font-weight: 500; line-height: 1.55">Считать не из чего. Цена подаётся на 49 875 000 ₸ за «1.000» услуги без единицы измерения: ни направлений, ни тоннажа, ни числа отправлений. Объёмы, на которых заказчик построил бюджет, лежат в приложении 1 к ТС — файла «Приложение №1 АВИА20082026» в комплекте нет.</div>
+      <div style="font-size: 12px; color: #7c7c7c; margin-top: 8px">не найдено</div>
+
+      <div style="height: 1px; background: #dedede; margin-top: 16px"></div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 15px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Аванса нет вообще: предоплата 0 %, всё оплачивается по факту не позднее 30 календарных дней с подписания акта. Авиакомпании платят вперёд, а срок договора 275 дней — кассовый разрыв держится весь период.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Возмещение по стоимости груза, а не перевозки: утрата или полное повреждение — 100 % фактической стоимости отправления по бухгалтерской справке заказчика. Возят телефоны, модемы и роутеры — коробка стоит кратно дороже её доставки.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Претензия списывается сама. Не ответил на коммерческий акт за 15 рабочих дней — сумма удерживается со счёта оказанных услуг без отдельного согласия.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Ответственность без потолка: по пункту 3.6 договора исполнитель «освобождает и ограждает заказчика от всей без исключения ответственности и возможных расходов». Суммой договора это не ограничено.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Односторонний отказ заказчика из-за нарушений исполнителя — штраф 10 % от суммы договора, это 4 987 500 ₸ поверх удержанного обеспечения.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Обязанности исполнителя в ТС продублированы: пункты 20–27 слово в слово повторены в пунктах 28–35. Требования те же, нумерация двойная — на какой пункт ссылаться в споре, непонятно.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Единственный квалификационный фильтр — сертификат по управлению проектами уровня D. Для авиаперевозок это нетипично: ни опыта, ни лицензии, ни техники не спрашивают, а проектный сертификат обязателен. Отсекает по формальному признаку, а не по способности возить.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 13px">
+        <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Круглосуточный персональный менеджер и ответ на запрос за 20 минут — это постоянный дежурный ресурс на 275 дней, в цене отдельной строкой не предусмотренный.</div>
+        <div style="flex-grow: 1"></div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#131313" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6 L8 11 L13 6"/></svg>
+      <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ФИНАНСОВАЯ МОДЕЛЬ</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 12.5px; color: #7c7c7c">свернуть</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; margin-top: 14px; padding: 20px 22px; background: #f7f7f5">
+      <div style="font-size: 17px; font-weight: 500; line-height: 1.5">Цену за единицу посчитать не на чем, поэтому модель пока про деньги, а не про тариф: сколько нужно заморозить, когда придёт оплата и где проходит нижняя граница цены.</div>
+      <div style="height: 1px; background: #dedede; margin-top: 18px"></div>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px">
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Сумма договора без НДС</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px; font-weight: 500" class="num">49 875 000 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">С НДС 16 %</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">57 855 000 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Аванс</div>
+          <div style="font-size: 12px; color: #7c7c7c" class="num">предоплата 0 %</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">0 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Промежуточные платежи 100 %</div>
+          <div style="font-size: 12px; color: #7c7c7c" class="num">не позднее 30 кал. дней с акта</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">49 875 000 ₸</div>
+        </div>
+        <div style="height: 1px; background: #dedede"></div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Обеспечение заявки</div>
+          <div style="font-size: 12px; color: #7c7c7c" class="num">заморожено от вскрытия, 90 дней</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">498 750 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Обеспечение исполнения</div>
+          <div style="font-size: 12px; color: #7c7c7c" class="num">до полного исполнения обязательств</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">498 750 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; font-weight: 500">Отвлечение средств</div>
+          <div style="font-size: 12px; color: #7c7c7c">на весь срок договора</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 15px; font-weight: 600" class="num">997 500 ₸</div>
+        </div>
+      </div>
+      <div style="height: 1px; background: #dedede; margin-top: 16px"></div>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px">
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Пол по демпингу</div>
+          <div style="font-size: 13.5px; color: #4a4a4a">считается от среднего по всем допущенным предложениям — известен только после вскрытия</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Условная цена при скидке 3,5 %</div>
+          <div style="font-size: 12px; color: #7c7c7c">опыт 5 лет плюс статус МСБ</div>
+          <div style="flex-grow: 1"></div>
+          <div style="font-size: 13.5px" class="num">48 129 375 ₸</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Себестоимость</div>
+          <div style="font-size: 13.5px; color: #7c7c7c">норматив для категории «транспортно-логистические услуги» не задан</div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 14px">
+          <div style="width: 250px; font-size: 13.5px; color: #4a4a4a">Отдельные статьи</div>
+          <div style="font-size: 13.5px">дежурный менеджер 24/7 на 275 дней, упаковка, страхование груза, резерв на возмещение стоимости отправлений</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 18px">
+        <div style="font-size: 12.5px; color: #7c7c7c">Загрузи приложение 1 к ТС — соберётся тариф за килограмм и за отправление по направлениям</div>
+        <div style="flex-grow: 1"></div>
+        <div style="flex-shrink: 0; white-space: nowrap; font-size: 13px; font-weight: 500; border-bottom: 1px solid #131313">Полный расчёт и .xlsx</div>
+      </div>
+    </div>
+
+    <div style="height: 1px; background: #e3e3e3; margin-top: 28px"></div>
+    <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#131313" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 L11 8 L6 13"/></svg>
+      <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ПРОШЛЫЕ ТЕНДЕРЫ И КОНКУРЕНТЫ</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 12.5px; color: #7c7c7c">развернуть</div>
+    </div>
+
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 12px">
+      <div style="font-size: 13.5px; color: #4a4a4a; line-height: 1.55">Не собиралось. Внутри: закупки Kcell по транспортно-логистическим услугам за 3 года, кто подавался и по каким ценам, кто выиграл и с каким снижением от стартовой, проверка победителей в РНУ и Перечне ненадёжных Фонда.</div>
+      <div style="flex-grow: 1"></div>
+      <div style="width: 106px; font-size: 13px; font-weight: 500; text-align: right; border-bottom: 1px solid #131313">Собрать</div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0; width: 216px; padding: 28px 18px; border-left: 1px solid #e3e3e3; box-sizing: border-box; background: #fbfbfa">
+    <div style="font-size: 10px; color: #7c7c7c; letter-spacing: 0.6px">ДОКУМЕНТЫ · 5 ИЗ 6</div>
+
+    <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; margin-top: 22px">ОБЩИЕ ПО ЗАКУПКЕ</div>
+    <div style="display: flex; flex-direction: column; gap: 13px; margin-top: 12px">
+      <div style="display: flex; gap: 9px">
+        <div style="width: 2px; background: #131313; align-self: stretch"></div>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <div style="font-size: 12.5px; font-weight: 500; line-height: 1.35">Объявление о предварительном обсуждении</div>
+          <div style="font-size: 11px; color: #7c7c7c" class="num">2 стр. · открыто</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.35">Электронная тендерная документация</div>
+        <div style="font-size: 11px; color: #ababab" class="num">26 стр. · рус + каз</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.35">Проект договора об оказании услуг</div>
+        <div style="font-size: 11px; color: #ababab" class="num">34 стр. · 4 приложения</div>
+      </div>
+    </div>
+
+    <div style="font-size: 11px; color: #7c7c7c; letter-spacing: 0.4px; margin-top: 26px">ЛОТ 1 · 443 У · 4514471</div>
+    <div style="display: flex; flex-direction: column; gap: 13px; margin-top: 12px">
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.35">Техническая спецификация</div>
+        <div style="font-size: 11px; color: #ababab" class="num">8 стр. · рус + каз</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #4a4a4a; line-height: 1.35">Прил. 2 к ТС · Форма коммерческого акта</div>
+        <div style="font-size: 11px; color: #ababab">рус</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 11px">
+        <div style="font-size: 12.5px; color: #ababab; line-height: 1.35">Прил. 1 к ТС · Объёмы, АВИА20082026</div>
+        <div style="font-size: 11px; color: #ababab">не загружено</div>
+      </div>
+    </div>
+
+    <div style="flex-grow: 1"></div>
+    <div style="height: 1px; background: #e8e8e6"></div>
+    <div style="font-size: 11px; color: #7c7c7c; line-height: 1.5; margin-top: 12px">Комплект неполный: нет приложения 1 к ТС с объёмами. Разбор идёт по тому, что есть.</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 0; width: 628px; border-left: 1px solid #e3e3e3; background: #d9d9d6; box-sizing: border-box">
+
+    <div style="display: flex; align-items: center; gap: 14px; padding: 16px 22px; background: #ffffff; border-bottom: 1px solid #e3e3e3">
+      <div style="font-size: 13px; font-weight: 500">Объявление о предварительном обсуждении.pdf</div>
+      <div style="font-size: 12.5px; color: #7c7c7c" class="num">2 / 2</div>
+      <div style="flex-grow: 1"></div>
+      <div style="font-size: 12.5px; color: #4a4a4a">Поиск</div>
+      <div style="font-size: 12.5px; color: #4a4a4a">Скачать</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0; flex-grow: 1; padding: 20px 24px; overflow: hidden">
+
+      <div style="position: relative; box-shadow: 0 1px 4px rgba(0,0,0,0.18); background: #ffffff">
+        <img src="ann-page-1247669.png" style="display: block; width: 100%">
+        <div style="position: absolute; left: 5.06%; top: 42.29%; width: 89.86%; height: 7.6%; border: 1.5px solid #131313; background: rgba(19,19,19,0.10)"></div>
+      </div>
+
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 14px 2px 0 2px">
+        <div style="font-size: 11.5px; color: #3a3a3a; line-height: 1.55">Открыто кликом по «49 875 000 ₸» — подчёркнут тот вывод, чей источник сейчас на экране. Рамка поставлена по координатам из самого PDF.</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>
