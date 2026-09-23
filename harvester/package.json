@@ -1,0 +1,26 @@
+{
+  "name": "get-tender-harvester",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Выгрузка тендеров с zakup.sk.kz: дозор, сборщик, хранилище",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "probe": "tsx src/cli.ts probe",
+    "watch": "tsx src/cli.ts watch",
+    "fetch": "tsx src/cli.ts fetch",
+    "status": "tsx src/cli.ts status",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "playwright-core": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+data/
+probe-dump/
+probe-report.json
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
