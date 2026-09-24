@@ -148,13 +148,14 @@ export function unusualHeaders(headers: Record<string, string>): { name: string;
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-export type PortalMode = 'http' | 'hybrid' | 'browser';
+export type PortalMode = 'http' | 'hybrid' | 'browser' | 'unknown';
 
 export interface Verdict {
   mode: PortalMode;
-  variant: 'A/B' | 'C' | 'D';
+  variant: 'A/B' | 'C' | 'D' | '—';
   summary: string;
   filesOverHttp: boolean;
+  portalReachable: boolean;
 }
 
 /**
@@ -165,16 +166,29 @@ export interface Verdict {
  * API требует браузера.
  */
 export function decideMode(r: {
+  portalReachable: boolean;
   fileOverPlainHttp: boolean;
   apiWithoutHeaders: boolean;
   apiWithBrowserHeaders: boolean;
 }): Verdict {
+  // До портала не достучались вообще. Никакого вывода о способе доступа
+  // из этого не следует — сказать «нужен браузер» было бы выдумкой.
+  if (!r.portalReachable) {
+    return {
+      mode: 'unknown',
+      variant: '—',
+      summary: 'портал недоступен с этой машины — проверка не состоялась',
+      filesOverHttp: false,
+      portalReachable: false,
+    };
+  }
   if (r.apiWithoutHeaders) {
     return {
       mode: 'http',
       variant: 'A/B',
       summary: 'API отвечает без подписи — браузер не нужен вообще',
       filesOverHttp: r.fileOverPlainHttp,
+      portalReachable: true,
     };
   }
   if (r.apiWithBrowserHeaders) {
@@ -183,6 +197,7 @@ export function decideMode(r: {
       variant: 'C',
       summary: 'подпись из браузера переиспользуется обычным клиентом — гибрид',
       filesOverHttp: r.fileOverPlainHttp,
+      portalReachable: true,
     };
   }
   return {
@@ -192,5 +207,6 @@ export function decideMode(r: {
       ? 'API только через браузер, файлы качаются обычным HTTP'
       : 'всё через браузер',
     filesOverHttp: r.fileOverPlainHttp,
+    portalReachable: true,
   };
 }

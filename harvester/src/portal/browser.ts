@@ -121,7 +121,14 @@ export class PortalBrowser {
     await this.pace();
     const page = this.page!;
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+      // Переход на тот же адрес — пустая операция для браузера, и SPA не
+      // перезапускается: смена одного лишь hash её не перерисовывает.
+      // Поэтому на совпадающем адресе нужен полный перезаход.
+      if (page.url() === url) {
+        await page.reload({ waitUntil: 'domcontentloaded', timeout: 60_000 });
+      } else {
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+      }
       // SPA дорисовывает список уже после domcontentloaded.
       await page.waitForLoadState('networkidle', { timeout: 30_000 }).catch(() => undefined);
       if (opts.waitMs) await page.waitForTimeout(opts.waitMs);

@@ -6,6 +6,7 @@
   "description": "Выгрузка тендеров с zakup.sk.kz: дозор, сборщик, хранилище",
   "engines": { "node": ">=20" },
   "scripts": {
+    "demo": "tsx src/cli.ts demo",
     "probe": "tsx src/cli.ts probe",
     "watch": "tsx src/cli.ts watch",
     "fetch": "tsx src/cli.ts fetch",

@@ -52,12 +52,26 @@ test('нестандартные заголовки отделяются от о
 });
 
 test('вердикт различает три исхода', () => {
-  assert.equal(decideMode({ fileOverPlainHttp: true, apiWithoutHeaders: true, apiWithBrowserHeaders: true }).mode, 'http');
-  assert.equal(decideMode({ fileOverPlainHttp: true, apiWithoutHeaders: false, apiWithBrowserHeaders: true }).mode, 'hybrid');
-  const d = decideMode({ fileOverPlainHttp: true, apiWithoutHeaders: false, apiWithBrowserHeaders: false });
+  const ok = { portalReachable: true, fileOverPlainHttp: true };
+  assert.equal(decideMode({ ...ok, apiWithoutHeaders: true, apiWithBrowserHeaders: true }).mode, 'http');
+  assert.equal(decideMode({ ...ok, apiWithoutHeaders: false, apiWithBrowserHeaders: true }).mode, 'hybrid');
+  const d = decideMode({ ...ok, apiWithoutHeaders: false, apiWithBrowserHeaders: false });
   assert.equal(d.mode, 'browser');
   assert.equal(d.variant, 'D');
   assert.equal(d.filesOverHttp, true, 'файлы качаются HTTP даже когда API требует браузера');
+});
+
+test('недоступный портал даёт «не проверили», а не «нужен браузер»', () => {
+  const v = decideMode({
+    portalReachable: false,
+    fileOverPlainHttp: false,
+    apiWithoutHeaders: false,
+    apiWithBrowserHeaders: false,
+  });
+  assert.equal(v.mode, 'unknown', 'из сетевого отказа не следует никакого вывода о способе доступа');
+  assert.equal(v.variant, '—');
+  assert.equal(v.portalReachable, false);
+  assert.match(v.summary, /недоступен/);
 });
 
 test('путь в хранилище выводится из хеша и разводит файлы по каталогам', () => {

@@ -7,7 +7,9 @@ import { rowsFromListResponse, type ListRow } from '../portal/extract.js';
 import { upsertPurchase, upsertLot, saveRawCapture, getKv, setKv } from '../db/repo.js';
 import { enqueue } from './queue.js';
 
-const LIST_URL = process.env.PORTAL_LIST_URL ?? `${config.baseUrl}/#/ext/lots`;
+/** Считается при каждом обходе, а не при загрузке модуля: иначе демо и
+ *  тесты не могут подменить адрес портала. */
+const listUrl = (): string => process.env.PORTAL_LIST_URL ?? `${config.baseUrl}/#/ext/lots`;
 
 /**
  * Дозор: раз в минуту открывает первую страницу списка, отсортированного
@@ -18,7 +20,7 @@ const LIST_URL = process.env.PORTAL_LIST_URL ?? `${config.baseUrl}/#/ext/lots`;
  */
 export async function watchOnce(db: Db, browser: PortalBrowser): Promise<{ seen: number; fresh: number; changed: number }> {
   browser.clearCaptures();
-  await browser.goto(LIST_URL, { waitMs: 5_000 });
+  await browser.goto(listUrl(), { waitMs: 5_000 });
 
   const rows = await readRows(browser, db);
   if (rows.length === 0) {

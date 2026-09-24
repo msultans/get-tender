@@ -56,10 +56,14 @@ export async function runProbe(outDir = 'probe-dump'): Promise<ProbeReport> {
   const browser = new PortalBrowser();
   let apiWithoutHeaders = false;
   let apiWithBrowserHeaders = false;
+  // Портал считается достижимым, только если страница реально открылась.
+  // Сетевой отказ — это «не проверили», а не «нужен браузер».
+  let portalReachable = fileOverPlainHttp;
 
   try {
     log.info('опыт 0: главная страница, ищу раздел для разработчиков');
     const page = await browser.goto(config.baseUrl, { waitMs: 3_000 });
+    portalReachable = true;
     const devLinks = await page
       .$$eval('a', (as) =>
         as
@@ -166,7 +170,7 @@ export async function runProbe(outDir = 'probe-dump'): Promise<ProbeReport> {
     await browser.close();
   }
 
-  const verdict = decideMode({ fileOverPlainHttp, apiWithoutHeaders, apiWithBrowserHeaders });
+  const verdict = decideMode({ portalReachable, fileOverPlainHttp, apiWithoutHeaders, apiWithBrowserHeaders });
 
   const report: ProbeReport = {
     startedAt: new Date().toISOString(),
@@ -216,6 +220,14 @@ async function findSignatureInBundles(
 
 function nextSteps(v: Verdict, experiments: Record<string, unknown>): string[] {
   const steps: string[] = [];
+  if (!v.portalReachable) {
+    return [
+      'Ни один запрос не дошёл до портала — дело в сети, а не в портале.',
+      'Проверь: открывается ли zakup.sk.kz в обычном браузере на этой же машине.',
+      'Если ты за корпоративной сетью, прокси или VPN — запусти probe оттуда, откуда портал открывается.',
+      'Никакого вывода о способе доступа из этого запуска не следует.',
+    ];
+  }
   if (v.mode === 'http') {
     steps.push('API отвечает без подписи. Браузер можно убрать совсем — это самый дешёвый исход.');
   } else if (v.mode === 'hybrid') {

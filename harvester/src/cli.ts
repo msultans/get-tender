@@ -7,13 +7,15 @@ import { fetchLoop } from './pipeline/fetch.js';
 import { queueStats } from './pipeline/queue.js';
 import { setKv, getKv } from './db/repo.js';
 import { PortalBrowser } from './portal/browser.js';
+import { runDemo } from './demo/run.js';
 
 const [, , command, ...args] = process.argv;
 
 const HELP = `
 get-tender harvester — выгрузка тендеров с zakup.sk.kz
 
-  npm run probe     проверить портал и выбрать способ доступа
+  npm run demo      прогнать весь конвейер против поддельного портала
+  npm run probe     проверить настоящий портал и выбрать способ доступа
   npm run watch     дозор: раз в минуту смотреть первую страницу списка
   npm run fetch     сборщик: разбирать очередь карточек и качать файлы
   npm run status    что уже в базе
@@ -27,17 +29,31 @@ get-tender harvester — выгрузка тендеров с zakup.sk.kz
 
 async function main(): Promise<void> {
   switch (command) {
+    case 'demo': {
+      const ok = await runDemo();
+      if (!ok) process.exitCode = 1;
+      break;
+    }
+
     case 'probe': {
       log.info('проверяю портал', { baseUrl: config.baseUrl });
       const report = await runProbe();
       const db = openDb();
-      setKv(db, 'portal.mode', report.verdict.mode);
-      setKv(db, 'probe.at', report.startedAt);
+      if (report.verdict.portalReachable) {
+        setKv(db, 'portal.mode', report.verdict.mode);
+        setKv(db, 'probe.at', report.startedAt);
+      }
 
       console.log('\n─────────────────────────────────────────────');
-      console.log(`ВЕРДИКТ:  вариант ${report.verdict.variant} — ${report.verdict.mode}`);
-      console.log(report.verdict.summary);
-      console.log(`Файлы обычным HTTP: ${report.verdict.filesOverHttp ? 'да' : 'нет'}`);
+      if (!report.verdict.portalReachable) {
+        console.log('ПРОВЕРКА НЕ СОСТОЯЛАСЬ');
+        console.log(report.verdict.summary);
+        process.exitCode = 1;
+      } else {
+        console.log(`ВЕРДИКТ:  вариант ${report.verdict.variant} — ${report.verdict.mode}`);
+        console.log(report.verdict.summary);
+        console.log(`Файлы обычным HTTP: ${report.verdict.filesOverHttp ? 'да' : 'нет'}`);
+      }
       console.log('─────────────────────────────────────────────');
       for (const step of report.nextSteps) console.log(`  · ${step}`);
       console.log('\nОтчёт: probe-report.json, сырые ответы: probe-dump/');
